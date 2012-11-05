@@ -16,25 +16,25 @@ class PropVar(object):
 
 
 class Not(object):
-    def __init__(self, variable):
-        self.variable = variable
+    def __init__(self, expr):
+        self.expr = expr
 
 
     def evaluate(self):
         print "evaluating NOT"
-        return not self.variable.evaluate()
+        return not self.expr.evaluate()
 
 
 
 class And(object):
-    def __init__(self, v1, v2):
-        self.v1 = v1
-        self.v2 = v2
+    def __init__(self, e1, e2):
+        self.e1 = e1
+        self.e2 = e2
 
 
     def evaluate(self):
         print "evaluating AND"
-        return self.v1.evaluate() and self.v2.evaluate()
+        return self.e1.evaluate() and self.e2.evaluate()
 
 
 
